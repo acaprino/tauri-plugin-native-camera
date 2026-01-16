@@ -29,7 +29,7 @@ This plugin uses Android's `ACTION_IMAGE_CAPTURE` intent to open the system came
 | Platform | Supported |
 |----------|-----------|
 | Android  | ✅        |
-| iOS      | ❌ (planned) |
+| iOS      | ❌        |
 | Desktop  | ❌        |
 
 ## Installation
