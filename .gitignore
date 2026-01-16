@@ -1,0 +1,27 @@
+# Generated files
+/target/
+Cargo.lock
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Android
+android/.gradle/
+android/build/
+android/local.properties
+*.apk
+*.aab
+
+# Node
+node_modules/
+guest-js/dist/
+guest-js/node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Rust
+*.rs.bk

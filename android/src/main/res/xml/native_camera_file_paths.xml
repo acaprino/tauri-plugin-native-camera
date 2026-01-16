@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2026 Kushal Das -->
+<!-- SPDX-License-Identifier: MIT -->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cache directory for temporary photo files -->
+    <cache-path
+        name="native_camera_images"
+        path="native_camera/" />
+</paths>

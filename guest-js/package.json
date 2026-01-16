@@ -1,0 +1,44 @@
+{
+  "name": "tauri-plugin-native-camera-api",
+  "version": "0.1.0",
+  "description": "JavaScript/TypeScript API for tauri-plugin-native-camera",
+  "author": "Kushal Das <mail@kushaldas.in>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kushaldas/tauri-plugin-native-camera"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@tauri-apps/api": "^2.0.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "tauri",
+    "plugin",
+    "camera",
+    "android",
+    "mobile",
+    "native"
+  ]
+}

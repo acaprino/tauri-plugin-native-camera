@@ -1,0 +1,11 @@
+# Copyright 2026 Kushal Das
+# SPDX-License-Identifier: MIT
+
+# Permission to take pictures using the native camera.
+
+"$schema" = "schemas/schema.json"
+
+[[permission]]
+identifier = "allow-take-picture"
+description = "Allows the app to take pictures using the device's native camera application."
+commands.allow = ["take_picture"]

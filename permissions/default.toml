@@ -1,0 +1,13 @@
+# Copyright 2026 Kushal Das
+# SPDX-License-Identifier: MIT
+
+# Default permissions for the native camera plugin.
+# This permission set is empty by default - apps must explicitly
+# enable camera access.
+
+"$schema" = "schemas/schema.json"
+
+[[permission]]
+identifier = "default"
+description = "Default permission set (empty - no camera access)"
+permissions = []
