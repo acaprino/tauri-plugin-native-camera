@@ -92,7 +92,6 @@ class NativeCameraPlugin(private val activity: Activity) : Plugin(activity) {
             val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
                 putExtra(MediaStore.EXTRA_OUTPUT, photoUri)
                 addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
-                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             }
 
             // Launch camera directly (don't use resolveActivity - unreliable on Android 11+)
