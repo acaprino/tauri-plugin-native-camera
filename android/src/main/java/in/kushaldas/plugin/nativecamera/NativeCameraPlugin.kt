@@ -21,6 +21,7 @@ import app.tauri.annotation.ActivityCallback
 import app.tauri.annotation.Command
 import app.tauri.annotation.InvokeArg
 import app.tauri.annotation.Permission
+import app.tauri.annotation.PermissionCallback
 import app.tauri.annotation.TauriPlugin
 import app.tauri.plugin.Invoke
 import app.tauri.plugin.JSObject
@@ -61,7 +62,7 @@ class NativeCameraPlugin(private val activity: Activity) : Plugin(activity) {
         launchCamera(invoke)
     }
 
-    @ActivityCallback
+    @PermissionCallback
     private fun handleCameraPermissionResult(invoke: Invoke) {
         Log.d(TAG, "handleCameraPermissionResult called")
 
