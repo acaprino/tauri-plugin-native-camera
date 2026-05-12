@@ -88,11 +88,18 @@ class NativeCameraPlugin(private val activity: Activity) : Plugin(activity) {
                 photoFile
             )
 
-            // Create camera intent
+            // Create camera intent.
+            //
+            // The camera app receives a writable URI to which it writes the captured
+            // JPEG. It never needs to READ from that URI -- the file is empty until
+            // the camera writes into it. FLAG_GRANT_READ_URI_PERMISSION would only
+            // expand the granted scope (any adjacent files the consumer app's
+            // FileProvider exposes via the same authority become readable from
+            // inside the camera app's process), which is an over-grant relative to
+            // the operation.
             val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
                 putExtra(MediaStore.EXTRA_OUTPUT, photoUri)
                 addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
-                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             }
 
             // Launch camera directly (don't use resolveActivity - unreliable on Android 11+)
