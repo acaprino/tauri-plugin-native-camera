@@ -1,0 +1,15 @@
+# Normalize all text files to LF on checkin, and check them out with LF
+# regardless of platform. This kills the autocrlf CRLF/LF flip-flop that
+# was making Windows checkouts look "dirty" against a Linux/macOS-authored
+# index (every .kt/.kts/.xml/.pro/.toml/.md/.json file showed as modified).
+* text=auto eol=lf
+
+# Binary files: never touch line endings.
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.webp   binary
+*.ico    binary
+*.jar    binary
+*.keystore binary
